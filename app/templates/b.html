@@ -21,7 +21,7 @@
 				<h3>Task 1b</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button class="btn btn-light float-right" id="stop">
 					Stop
 				</button>
 			</div>
@@ -29,7 +29,7 @@
 
 		<div class="row">
 			<div class="col-12">
-				<div class="shape-container">
+				<div class="shape-container" id="addbuble">
 					<!-- Dynamically add your circles here! -->
 					<!-- Example circle: <div class="p2-circle bg-blue"></div> -->
 				</div>
@@ -39,8 +39,17 @@
 
 
 <script type="text/javascript">
-
 	// your solution here
+  var myTime = setInterval(myTimer ,1000);
+  function myTimer() {
+    $(document).ready(function(){
+      $("#addbuble").append('<div class="p2-circle bg-blue"></div>');
+    });
+    
+    $("#stop").click(function(){
+      clearInterval(myTime);
+    });
+  }
 
 </script>
 </body>
