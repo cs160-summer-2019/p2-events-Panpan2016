@@ -44,8 +44,8 @@
 					<div class="p2-circle bg-yellow"></div>
 					<div class="p2-circle bg-yellow"></div>
 					<div class="p2-circle bg-yellow"></div>
-					<div class="p2-circle bg-orange p2-border" id="orange-border1"></div>
-					<div class="p2-circle bg-orange p2-border" id="orange-border2"></div>
+					<div class="p2-circle bg-orange p2-border"></div>
+					<div class="p2-circle bg-orange p2-border"></div>
 					<div class="p2-circle bg-orange"></div>
 					<div class="p2-circle bg-orange"></div>
 					<div class="p2-circle bg-orange"></div>
@@ -71,17 +71,16 @@
       $(".bg-green").hide();
       $(".bg-blue").hide();
     });
-    $("#orange-border1").click(function(){
-      $("#orange-border2").hide();
+    $(".bg-orange.p2-border").click(function(){
+      $(".bg-orange.p2-border").hide();
+      $(event.target).show();
     });
-    $("#orange-border2").click(function(){
-      $("#orange-border1").hide();
-    });
+    
     $("#gradient-circle").mouseenter(function(){
       $("#gradient-circle").hide();
     });
     $("#show").click(function(){
-      $(".bg-purple, .bg-green, .bg-blue, #orange-border1, #orange-border2, #gradient-circle").show();
+      $(".bg-purple, .bg-green, .bg-blue, .bg-orange.p2-border, #gradient-circle").show();
     });
   });
 
